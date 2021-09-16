@@ -5,13 +5,24 @@ sequence = ["q","w","e","r","t","u","i","o","p","a","s","d","f","g","h","j","k",
 final = []
 
 userInput = True
+
 while userInput == True:
   try:
     letters = int(input("How many characters would you like to have in your password? "))
-    userInput = False
+    if letters => 0:
+      print("Invalid input - Not a number")  
+      time.sleep(1.5)
+      print(
+     )
+      userInput = True
+    else:
+      userInput = False
   except:
     print("Invalid input - Not a number")  
-    time.sleep(1)
+    time.sleep(1.5)
+    print(
+    )
+
 
 for x in range(letters):
   final.append(random.choice(sequence))
